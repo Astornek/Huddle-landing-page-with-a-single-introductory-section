@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+}
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Violet);
+  background-image: url("../images/bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 90rem;
+  width: 100%;
+  position: relative;
+}
+.logo {
+  margin-bottom: 6rem;
+}
+h1 {
+  font-size: 2.4rem;
+  max-width: 30rem;
+}
+.des {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1rem;
+  max-width: 32rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+button {
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: var(--Violet);
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: var(--Soft-Magenta);
+  color: white;
+  cursor: pointer;
+}
+.links {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: -5rem;
+
+  right: 0rem;
+}
+.link {
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: all 0.3s;
+}
+.link:hover {
+  color: var(--Soft-Magenta);
+  cursor: pointer;
+  border-color: var(--Soft-Magenta);
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.9rem;
+}
+@media (max-width: 1050px) {
+  .wrapper {
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+  footer {
+    display: none;
+  }
+  .wrap-right {
+    text-align: center;
+  }
+  .links {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 730px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+  }
+  .wrap-left {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+  .logo {
+    align-items: flex-start;
+
+    width: 100%;
+  }
+  .wrapper {
+    gap: 1rem;
+    align-items: center;
+  }
+  .main-img img {
+    width: 300px;
+  }
+  .wrap-right {
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 2rem;
+  }
+  .logo img {
+    width: 180px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    max-width: 20rem;
+    text-align: center;
+  }
+  .des {
+    max-width: 19rem;
+    width: 100%;
+  }
+}
